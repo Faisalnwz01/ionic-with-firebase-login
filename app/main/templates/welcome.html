@@ -1,25 +1,37 @@
 <ion-view hide-nav-bar="true">
   <!-- do you want padding? -->
+
   <ion-content class="padding" style=" background-image: url('main/assets/images/NYC1.png');
   background-repeat: no-repeat;    background-size: cover; ">
+
     <!-- content goes here -->
-    <h1 id="welcomeHeader">Anchor</h1>
-    <h4 id="welcomeSubHeader">Know whats happening <br/> in your neighborhood</h4>
+    <div style="background-color: rgba(0, 0, 0, 0.29);
+      position: absolute;
+      width:100%;
+      z-index: -10;">
+      <h1 id="welcomeHeader">Anchor</h1>
+      <h4 id="welcomeSubHeader">Know whats happening
+
+        <br/>
+        in your neighborhood</h4>
+    </div>
     <!-- <div class="row">
       <button class="button buttonWelcome col col-33">Signup</button>
       <button class="button buttonWelcome col col-33 col-offset-33">Login</button>
     </div> -->
   </ion-content>
   <div class="fixed-outside">
-      <div class="row">
-            <div class="col">
-                <button class="button button-circle button-energized icon ion-log-in"></button>
-            </div>
-            <div class="col">
-                <button class="button button-circle button-positive icon ion-person-add"></button>
-            </div>
-        </div>
-
-        <p class="text-center"><a href="#/app/forgot-password">Forgot password</a></p>
+    <div class="row">
+      <div class="col">
+        <button ng-click="vm.openLoginModal()" class="button button-circle button-energized icon ion-log-in"></button>
+      </div>
+      <div class="col">
+        <button ng-click="vm.openSignupModal()" class="button button-circle button-positive icon ion-person-add"></button>
+      </div>
     </div>
+
+    <p class="text-center">
+      <a href="#/app/forgot-password">Forgot password</a>
+    </p>
+  </div>
 </ion-view>

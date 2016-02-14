@@ -3,6 +3,9 @@ angular.module('main', [
   'ionic',
   'ngCordova',
   'ui.router',
+  'firebase',
+  'ngStorage',
+  'ngMessages'
   // TODO: load other modules selected during generation
 ])
 .config(function ($stateProvider, $urlRouterProvider) {
@@ -14,8 +17,8 @@ angular.module('main', [
     .state('welcome', {
       url: '/welcome',
       // abstract: true,
-      templateUrl: 'main/templates/welcome.html' //,
-      // controller: 'welcomeCtrl as ctrl'
+      templateUrl: 'main/templates/welcome.html',
+      controller: 'WelcomeCtrl as vm'
     })
     .state('main', {
       url: '/main',
@@ -49,4 +52,5 @@ angular.module('main', [
           }
         }
       });
-});
+})
+.constant('FURL', 'https://anchorit.firebaseio.com/');
